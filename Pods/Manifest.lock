@@ -1,0 +1,43 @@
+PODS:
+  - Apollo (0.42.0):
+    - Apollo/Core (= 0.42.0)
+  - Apollo/Core (0.42.0)
+  - Apollo/SQLite (0.42.0):
+    - Apollo/Core
+    - SQLite.swift (~> 0.12.2)
+  - Kingfisher (6.3.0)
+  - PullUpController (0.8.0)
+  - RangeSeekSlider (1.8.0)
+  - SQLite.swift (0.12.2):
+    - SQLite.swift/standard (= 0.12.2)
+  - SQLite.swift/standard (0.12.2)
+  - SwiftLint (0.43.1)
+
+DEPENDENCIES:
+  - Apollo
+  - Apollo/SQLite
+  - Kingfisher (~> 6.0)
+  - PullUpController
+  - RangeSeekSlider (~> 1.8)
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Apollo
+    - Kingfisher
+    - PullUpController
+    - RangeSeekSlider
+    - SQLite.swift
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Apollo: c3f1cc3bfb36e1c4bbb642f44184ad759ad42a87
+  Kingfisher: 6c3df386db71d82c0817a429d2c9421a77396529
+  PullUpController: 2f7ccaa0f35b31b47e3efbe1854c7f781552b3c7
+  RangeSeekSlider: 650b11fa1edcb92e1e0ede797669d98622570fb5
+  SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
+  SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
+
+PODFILE CHECKSUM: 892be962bd3bbbe03661021e492dc40c99e8c363
+
+COCOAPODS: 1.10.1

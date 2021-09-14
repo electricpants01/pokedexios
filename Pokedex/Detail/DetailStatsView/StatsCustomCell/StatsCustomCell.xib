@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-pro-display-regular.ttf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StatsCustomCellTypeReuseIdentifier" id="gTV-IL-0wX" customClass="StatsCustomCell" customModule="Pokedex" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="334" height="25"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="334" height="25"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZy-ok-4Yb">
+                        <rect key="frame" x="0.0" y="0.0" width="45" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="15" id="16k-2S-DE5"/>
+                            <constraint firstAttribute="width" constant="45" id="Fpp-3p-KPH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="39" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUp-Qw-s2P">
+                        <rect key="frame" x="50" y="0.0" width="35" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="3eo-gR-nQJ"/>
+                            <constraint firstAttribute="width" constant="35" id="4JX-TZ-Gsm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                        <color key="textColor" name="GenerationsTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="282" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwu-EO-hbI">
+                        <rect key="frame" x="304" y="0.0" width="30" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="1tn-fF-gW1"/>
+                            <constraint firstAttribute="width" constant="30" id="FKx-JC-6zc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                        <color key="textColor" name="GenerationsTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="188" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wek-Oc-JJ4">
+                        <rect key="frame" x="264" y="0.0" width="30" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="UWq-1m-60g"/>
+                            <constraint firstAttribute="width" constant="30" id="dqW-P8-in7"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                        <color key="textColor" name="GenerationsTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RDj-95-e1V">
+                        <rect key="frame" x="105" y="8" width="139" height="4"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="4" id="er7-TB-p54"/>
+                        </constraints>
+                    </progressView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Wek-Oc-JJ4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="4Q2-4n-Iqp"/>
+                <constraint firstAttribute="trailing" secondItem="nwu-EO-hbI" secondAttribute="trailing" id="7FC-xd-ebs"/>
+                <constraint firstItem="qZy-ok-4Yb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="DqW-sF-tsU"/>
+                <constraint firstItem="nwu-EO-hbI" firstAttribute="leading" secondItem="Wek-Oc-JJ4" secondAttribute="trailing" constant="10" id="LFV-NX-gPr"/>
+                <constraint firstItem="RDj-95-e1V" firstAttribute="leading" secondItem="pUp-Qw-s2P" secondAttribute="trailing" constant="20" id="NgB-5Q-yNP"/>
+                <constraint firstItem="RDj-95-e1V" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="PqX-qy-b0t"/>
+                <constraint firstItem="Wek-Oc-JJ4" firstAttribute="leading" secondItem="RDj-95-e1V" secondAttribute="trailing" constant="20" id="bej-OF-Oud"/>
+                <constraint firstItem="pUp-Qw-s2P" firstAttribute="leading" secondItem="qZy-ok-4Yb" secondAttribute="trailing" constant="5" id="paP-zp-nz2"/>
+                <constraint firstItem="qZy-ok-4Yb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="smV-4L-Nua"/>
+                <constraint firstItem="nwu-EO-hbI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tRU-47-130"/>
+                <constraint firstItem="pUp-Qw-s2P" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="v7m-gN-sQ4"/>
+            </constraints>
+            <size key="customSize" width="222" height="50"/>
+            <connections>
+                <outlet property="baseValue" destination="pUp-Qw-s2P" id="YfW-Yc-Lvj"/>
+                <outlet property="maxValue" destination="nwu-EO-hbI" id="zVX-zT-wH3"/>
+                <outlet property="minValue" destination="Wek-Oc-JJ4" id="IFf-lp-48v"/>
+                <outlet property="nameStat" destination="qZy-ok-4Yb" id="6RL-V0-b4l"/>
+                <outlet property="progressBar" destination="RDj-95-e1V" id="0Gg-Wk-MjY"/>
+            </connections>
+            <point key="canvasLocation" x="117.39130434782609" y="122.20982142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="GenerationsTextColor">
+            <color red="0.45500001311302185" green="0.45500001311302185" blue="0.46299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

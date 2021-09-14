@@ -1,0 +1,134 @@
+query getAllPokemons {
+  pokemons: pokemon_v2_pokemon {
+    name
+    id
+    pokemon_v2_pokemontypes {
+      type_id
+    }
+  }
+}
+
+query getAllPokemonsWithLimit($limit: Int) {
+  pokemons : pokemon_v2_pokemon (limit: $limit) {
+    id
+    name
+    height
+    weight
+    types : pokemon_v2_pokemontypes {
+      pokemon_v2_type {
+        id
+        name
+      }
+    }
+    generationData: pokemon_v2_pokemonspecy {
+      generation: pokemon_v2_generation {
+        id
+        name
+      }
+    }
+  }
+}
+
+query getPokemonsApplyingFilters($_minId: Int = 1, $_maxId: Int = 11000, $_minH: Int = 0, $_maxH: Int = 10000, $_minW: Int = 0, $_maxW: Int = 100000, $limit: Int = 20, $offset: Int = 0) {
+  pokemons: pokemon_v2_pokemon(where: {_and: [{id: {_gte: $_minId, _lte: $_maxId}, height: {_gte: $_minH, _lte: $_maxH}, weight: {_gte: $_minW, _lte: $_maxW}} ]}, limit: $limit, offset: $offset) {
+    id
+    name
+    height
+    weight
+    types: pokemon_v2_pokemontypes {
+      pokemon_v2_type {
+        id
+        name
+      }
+    }
+    generationData: pokemon_v2_pokemonspecy {
+      generation: pokemon_v2_generation {
+        id
+        name
+      }
+    }
+  }
+}
+
+query getPokemonsApplyingFiltersWithType($_minId: Int = 1, $_maxId: Int = 11000, $_minH: Int = 0, $_maxH: Int = 10000, $_minW: Int = 0, $_maxW: Int = 100000, $_typeId: Int = 1, $limit: Int = 20, $offset: Int = 0) {
+  pokemons: pokemon_v2_pokemon(where: {_and: [{id: {_gte: $_minId, _lte: $_maxId}, height: {_gte: $_minH, _lte: $_maxH}, weight: {_gte: $_minW, _lte: $_maxW}}, {pokemon_v2_pokemontypes: {type_id: {_eq: $_typeId}}}]}, limit: $limit, offset: $offset) {
+    id
+    name
+    height
+    weight
+    types: pokemon_v2_pokemontypes {
+      pokemon_v2_type {
+        id
+        name
+      }
+    }
+    generationData: pokemon_v2_pokemonspecy {
+      generation: pokemon_v2_generation {
+        id
+        name
+      }
+    }
+  }
+}
+
+query getAllPokemonsByNumberAsc {
+  gen3_species: pokemon_v2_pokemon(order_by: {id: asc}) {
+    name
+    id
+    pokemon_v2_pokemontypes {
+      type_id
+    }
+  }
+}
+
+query getAllPokemonsByNumberDesc {
+  gen3_species: pokemon_v2_pokemon(order_by: {id: desc}) {
+    name
+    id
+    pokemon_v2_pokemontypes {
+      type_id
+    }
+  }
+}
+
+query getAllPokemonsAlphabetically {
+  gen3_species: pokemon_v2_pokemon(order_by: {name: asc}) {
+    name
+    id
+    pokemon_v2_pokemontypes {
+      type_id
+    }
+  }
+}
+
+query getAllPokemonsAlphabeticallyReverse {
+  gen3_species: pokemon_v2_pokemon(order_by: {name: desc}) {
+    name
+    id
+    pokemon_v2_pokemontypes {
+      type_id
+    }
+  }
+}
+
+query GetPokemonsByGeneration($_gen: Int) {
+  pokemon_v2_generation(where: {id: {_eq: $_gen}}) {
+    pokemon_v2_pokemonspecies {
+      pokemon_v2_pokemons {
+        id
+        name
+        pokemon_v2_pokemontypes {
+          type_id
+        }
+      }
+    }
+  }
+}
+
+query getGenerations {
+  generations: pokemon_v2_generation {
+    id
+    name
+  }
+}
+ 

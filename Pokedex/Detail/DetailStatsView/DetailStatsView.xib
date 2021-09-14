@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-pro-display-bold.ttf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="sf-pro-display-regular.ttf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailStatsView" customModule="Pokedex" customModuleProvider="target">
+            <connections>
+                <outlet property="baseStatsCollectionView" destination="AAj-07-gT2" id="AQZ-GG-I7e"/>
+                <outlet property="baseStatsTitle" destination="j7T-DR-shw" id="ekz-zR-DKK"/>
+                <outlet property="contentView" destination="MBj-MI-CnT" id="vTD-zU-BKZ"/>
+                <outlet property="scrollView" destination="fu8-IL-b9r" id="ikc-ua-OQF"/>
+                <outlet property="typeDefenseTitle" destination="4Ds-yD-NJC" id="HdL-py-dWh"/>
+                <outlet property="typeDefensesCollectionView" destination="CxL-dB-Hzj" id="ODF-sG-VQ1"/>
+                <outlet property="typeDefensesSubTitle" destination="ti8-dd-uO1" id="xvI-Qj-FbX"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="MBj-MI-CnT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="581"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fu8-IL-b9r">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="581"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3V-Ut-haD">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="600"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type Defenses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Ds-yD-NJC">
+                                    <rect key="frame" x="40" y="388" width="334" height="19"/>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Base Stats" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7T-DR-shw">
+                                    <rect key="frame" x="40" y="30" width="334" height="19"/>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="16"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Effectiveness" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ti8-dd-uO1">
+                                    <rect key="frame" x="40" y="427" width="334" height="19"/>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                    <color key="textColor" name="GenerationsTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="CxL-dB-Hzj">
+                                    <rect key="frame" x="40" y="466" width="334" height="155"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="155" id="6gs-XP-6nw"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mj6-jy-F7n">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsL-Vc-lMH">
+                                    <rect key="frame" x="40" y="312" width="334" height="56"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="56" id="4JN-2w-yw6"/>
+                                    </constraints>
+                                    <string key="text">The ranges shown on the right are for a level 100 Pokémon. Maximum values are based on a beneficial nature, 252 EVs, 31 IVs; minimum values are based on a hindering nature, 0 EVs, 0 IVs.</string>
+                                    <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="12"/>
+                                    <color key="textColor" name="GenerationsTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="AAj-07-gT2">
+                                    <rect key="frame" x="40" y="69" width="334" height="240"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="240" id="j9O-bZ-4YJ"/>
+                                    </constraints>
+                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wGG-S7-Mis">
+                                        <size key="itemSize" width="128" height="128"/>
+                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    </collectionViewFlowLayout>
+                                </collectionView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="ti8-dd-uO1" firstAttribute="leading" secondItem="p3V-Ut-haD" secondAttribute="leading" constant="40" id="0XR-Db-2nT"/>
+                                <constraint firstAttribute="trailing" secondItem="bsL-Vc-lMH" secondAttribute="trailing" constant="40" id="12V-TS-5td"/>
+                                <constraint firstAttribute="trailing" secondItem="j7T-DR-shw" secondAttribute="trailing" constant="40" id="13y-5M-wjE"/>
+                                <constraint firstItem="4Ds-yD-NJC" firstAttribute="top" secondItem="p3V-Ut-haD" secondAttribute="top" constant="388" id="2cO-do-r2c"/>
+                                <constraint firstItem="AAj-07-gT2" firstAttribute="leading" secondItem="p3V-Ut-haD" secondAttribute="leading" constant="40" id="AwR-UG-DOj"/>
+                                <constraint firstItem="bsL-Vc-lMH" firstAttribute="leading" secondItem="p3V-Ut-haD" secondAttribute="leading" constant="40" id="Axo-TM-bst"/>
+                                <constraint firstAttribute="trailing" secondItem="CxL-dB-Hzj" secondAttribute="trailing" constant="40" id="G4o-er-Wkp"/>
+                                <constraint firstItem="CxL-dB-Hzj" firstAttribute="top" secondItem="ti8-dd-uO1" secondAttribute="bottom" constant="20" id="IZq-61-Tgw"/>
+                                <constraint firstItem="j7T-DR-shw" firstAttribute="leading" secondItem="p3V-Ut-haD" secondAttribute="leading" constant="40" id="TIW-ss-rV9"/>
+                                <constraint firstAttribute="trailing" secondItem="AAj-07-gT2" secondAttribute="trailing" constant="40" id="Ufl-dx-2YF"/>
+                                <constraint firstAttribute="trailing" secondItem="ti8-dd-uO1" secondAttribute="trailing" constant="40" id="Vkg-vj-Sca"/>
+                                <constraint firstItem="4Ds-yD-NJC" firstAttribute="leading" secondItem="p3V-Ut-haD" secondAttribute="leading" constant="40" id="Xe5-U3-dR6"/>
+                                <constraint firstItem="CxL-dB-Hzj" firstAttribute="leading" secondItem="p3V-Ut-haD" secondAttribute="leading" constant="40" id="ZoN-8d-fiS"/>
+                                <constraint firstAttribute="trailing" secondItem="4Ds-yD-NJC" secondAttribute="trailing" constant="40" id="aqT-ei-bFH"/>
+                                <constraint firstItem="ti8-dd-uO1" firstAttribute="top" secondItem="4Ds-yD-NJC" secondAttribute="bottom" constant="20" id="bJs-5f-K3t"/>
+                                <constraint firstItem="j7T-DR-shw" firstAttribute="top" secondItem="p3V-Ut-haD" secondAttribute="top" constant="30" id="dpT-Lo-hho"/>
+                                <constraint firstItem="bsL-Vc-lMH" firstAttribute="top" secondItem="j7T-DR-shw" secondAttribute="bottom" constant="263" id="lnM-QO-rbC"/>
+                                <constraint firstItem="AAj-07-gT2" firstAttribute="top" secondItem="j7T-DR-shw" secondAttribute="bottom" constant="20" id="tiD-wh-7iZ"/>
+                                <constraint firstAttribute="height" constant="600" id="x0x-az-rdh"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="p3V-Ut-haD" firstAttribute="width" secondItem="fu8-IL-b9r" secondAttribute="width" id="IQl-p7-M8e"/>
+                        <constraint firstAttribute="trailing" secondItem="p3V-Ut-haD" secondAttribute="trailing" id="M0H-Vg-6Q8"/>
+                        <constraint firstItem="p3V-Ut-haD" firstAttribute="height" secondItem="fu8-IL-b9r" secondAttribute="height" priority="250" id="WmN-ID-sMz"/>
+                        <constraint firstItem="p3V-Ut-haD" firstAttribute="top" secondItem="fu8-IL-b9r" secondAttribute="top" id="XOJ-7m-gLK"/>
+                        <constraint firstAttribute="bottom" secondItem="p3V-Ut-haD" secondAttribute="bottom" id="amc-v0-XCU"/>
+                        <constraint firstItem="p3V-Ut-haD" firstAttribute="leading" secondItem="fu8-IL-b9r" secondAttribute="leading" id="p6D-0t-2VK"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="yHY-D3-KJe"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fu8-IL-b9r" firstAttribute="top" secondItem="MBj-MI-CnT" secondAttribute="top" id="93C-yQ-KUM"/>
+                <constraint firstItem="fu8-IL-b9r" firstAttribute="leading" secondItem="yHY-D3-KJe" secondAttribute="leading" id="dXi-bD-Ngu"/>
+                <constraint firstItem="fu8-IL-b9r" firstAttribute="trailing" secondItem="yHY-D3-KJe" secondAttribute="trailing" id="erK-LZ-786"/>
+                <constraint firstItem="fu8-IL-b9r" firstAttribute="bottom" secondItem="yHY-D3-KJe" secondAttribute="bottom" id="fe0-09-yX8"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="805.79710144927537" y="21.763392857142858"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="GenerationsTextColor">
+            <color red="0.45500001311302185" green="0.45500001311302185" blue="0.46299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

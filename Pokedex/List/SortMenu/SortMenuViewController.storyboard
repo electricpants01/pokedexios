@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="sf-pro-display-bold.ttf">
+            <string>SFProDisplay-Bold</string>
+        </array>
+        <array key="sf-pro-display-regular.ttf">
+            <string>SFProDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Sort Menu View Controller-->
+        <scene sceneID="rnY-cU-jzO">
+            <objects>
+                <viewController storyboardIdentifier="SortMenuViewController" id="aZl-Yt-L7V" customClass="SortMenuViewController" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7dM-Jn-aYI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1124"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yke-tJ-V2I">
+                                <rect key="frame" x="0.0" y="614" width="414" height="510"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Sc-Pt-LTC">
+                                        <rect key="frame" x="40" y="30" width="334" height="31.5"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Bold" family="SF Pro Display" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sort Pokémons alphabetically or by National Pokédex number!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CMs-yu-HpU">
+                                        <rect key="frame" x="40" y="66.5" width="334" height="38.5"/>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                        <color key="textColor" red="0.4549019608" green="0.4549019608" blue="0.46274509800000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SZ-RJ-dGg">
+                                        <rect key="frame" x="40" y="140" width="334" height="60"/>
+                                        <color key="backgroundColor" name="notSelectedBackground"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="lsO-nc-yJD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                        <state key="normal" title="Smallest number first">
+                                            <color key="titleColor" name="notSelectedText"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeSort:" destination="aZl-Yt-L7V" eventType="touchUpInside" id="iWb-Hd-anX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QGO-Jt-dQ0">
+                                        <rect key="frame" x="40" y="220" width="334" height="60"/>
+                                        <color key="backgroundColor" name="notSelectedBackground"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="yBe-WF-6tZ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                        <state key="normal" title="Highest number first">
+                                            <color key="titleColor" name="notSelectedText"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeSort:" destination="aZl-Yt-L7V" eventType="touchUpInside" id="0fb-G0-a8g"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeH-sW-Wac">
+                                        <rect key="frame" x="40" y="300" width="334" height="60"/>
+                                        <color key="backgroundColor" name="notSelectedBackground"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="HhZ-EA-8wu"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="kSS-rx-JdM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                        <state key="normal" title="A-Z">
+                                            <color key="titleColor" name="notSelectedText"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeSort:" destination="aZl-Yt-L7V" eventType="touchUpInside" id="XdQ-Ta-2p1"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOW-FE-fw2">
+                                        <rect key="frame" x="40" y="380" width="334" height="60"/>
+                                        <color key="backgroundColor" name="notSelectedBackground"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="S5f-2v-HNc"/>
+                                            <constraint firstAttribute="height" constant="60" id="mNm-59-jzG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="SFProDisplay-Regular" family="SF Pro Display" pointSize="16"/>
+                                        <state key="normal" title="Z-A">
+                                            <color key="titleColor" name="notSelectedText"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="changeSort:" destination="aZl-Yt-L7V" eventType="touchUpInside" id="k3o-e2-l37"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="pOW-FE-fw2" firstAttribute="leading" secondItem="Yke-tJ-V2I" secondAttribute="leading" constant="40" id="1Dr-fv-bFp"/>
+                                    <constraint firstItem="QGO-Jt-dQ0" firstAttribute="leading" secondItem="Yke-tJ-V2I" secondAttribute="leading" constant="40" id="3Qp-TV-yYc"/>
+                                    <constraint firstItem="CeH-sW-Wac" firstAttribute="top" secondItem="QGO-Jt-dQ0" secondAttribute="bottom" constant="20" id="40H-aA-zCe"/>
+                                    <constraint firstAttribute="trailing" secondItem="CeH-sW-Wac" secondAttribute="trailing" constant="40" id="9Ef-Vk-wbM"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Sc-Pt-LTC" secondAttribute="trailing" constant="40" id="A37-FN-oaF"/>
+                                    <constraint firstAttribute="trailing" secondItem="QGO-Jt-dQ0" secondAttribute="trailing" constant="40" id="BI9-4X-S2O"/>
+                                    <constraint firstAttribute="trailing" secondItem="CMs-yu-HpU" secondAttribute="trailing" constant="40" id="EOM-La-JbE"/>
+                                    <constraint firstItem="2SZ-RJ-dGg" firstAttribute="top" secondItem="CMs-yu-HpU" secondAttribute="bottom" constant="35" id="FAR-na-R4K"/>
+                                    <constraint firstItem="CMs-yu-HpU" firstAttribute="leading" secondItem="Yke-tJ-V2I" secondAttribute="leading" constant="40" id="Hjy-oc-ox9"/>
+                                    <constraint firstItem="4Sc-Pt-LTC" firstAttribute="top" secondItem="Yke-tJ-V2I" secondAttribute="top" constant="30" id="JaD-FV-ZbG"/>
+                                    <constraint firstItem="4Sc-Pt-LTC" firstAttribute="leading" secondItem="Yke-tJ-V2I" secondAttribute="leading" constant="40" id="LwR-7V-fCB"/>
+                                    <constraint firstItem="2SZ-RJ-dGg" firstAttribute="leading" secondItem="Yke-tJ-V2I" secondAttribute="leading" constant="40" id="ZdH-3I-at9"/>
+                                    <constraint firstAttribute="trailing" secondItem="pOW-FE-fw2" secondAttribute="trailing" constant="40" id="bB2-Mf-7Mh"/>
+                                    <constraint firstItem="CMs-yu-HpU" firstAttribute="top" secondItem="4Sc-Pt-LTC" secondAttribute="bottom" constant="5" id="hUV-lW-Fg1"/>
+                                    <constraint firstItem="QGO-Jt-dQ0" firstAttribute="top" secondItem="2SZ-RJ-dGg" secondAttribute="bottom" constant="20" id="jZJ-lW-4vr"/>
+                                    <constraint firstItem="CeH-sW-Wac" firstAttribute="leading" secondItem="Yke-tJ-V2I" secondAttribute="leading" constant="40" id="mgV-UY-pyM"/>
+                                    <constraint firstAttribute="height" constant="510" id="op6-q2-ARx"/>
+                                    <constraint firstItem="pOW-FE-fw2" firstAttribute="top" secondItem="CeH-sW-Wac" secondAttribute="bottom" constant="20" id="r3Y-kF-7W4"/>
+                                    <constraint firstAttribute="trailing" secondItem="2SZ-RJ-dGg" secondAttribute="trailing" constant="40" id="zZm-3t-YcL"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4s2-lO-QLJ">
+                                <rect key="frame" x="157" y="604" width="100" height="5"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="5" id="DrC-h0-xwT"/>
+                                </constraints>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3eR-hi-uXy"/>
+                        <color key="backgroundColor" name="menuBackground"/>
+                        <constraints>
+                            <constraint firstItem="3eR-hi-uXy" firstAttribute="trailing" secondItem="4s2-lO-QLJ" secondAttribute="trailing" constant="157" id="8Nu-yG-8Cy"/>
+                            <constraint firstItem="4s2-lO-QLJ" firstAttribute="top" secondItem="3eR-hi-uXy" secondAttribute="top" constant="560" id="99S-ul-lpM"/>
+                            <constraint firstItem="Yke-tJ-V2I" firstAttribute="leading" secondItem="3eR-hi-uXy" secondAttribute="leading" id="CTb-AM-8oC"/>
+                            <constraint firstItem="Yke-tJ-V2I" firstAttribute="top" secondItem="4s2-lO-QLJ" secondAttribute="bottom" constant="5" id="Xnu-yw-jtO"/>
+                            <constraint firstItem="Yke-tJ-V2I" firstAttribute="trailing" secondItem="3eR-hi-uXy" secondAttribute="trailing" id="roR-dm-gXc"/>
+                            <constraint firstItem="4s2-lO-QLJ" firstAttribute="leading" secondItem="3eR-hi-uXy" secondAttribute="leading" constant="157" id="vxY-u3-IOA"/>
+                        </constraints>
+                    </view>
+                    <size key="freeformSize" width="414" height="1124"/>
+                    <connections>
+                        <outlet property="azSort" destination="CeH-sW-Wac" id="1k8-44-7IC"/>
+                        <outlet property="container" destination="Yke-tJ-V2I" id="Pqt-6h-1cx"/>
+                        <outlet property="highestNSort" destination="QGO-Jt-dQ0" id="20e-Bp-80W"/>
+                        <outlet property="scrollItem" destination="4s2-lO-QLJ" id="cOW-ag-wh1"/>
+                        <outlet property="smallestNSort" destination="2SZ-RJ-dGg" id="c8d-5D-KHl"/>
+                        <outlet property="zaSort" destination="pOW-FE-fw2" id="NqT-B6-VfD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nmq-rR-dE0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-291.304347826087" y="12.723214285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="menuBackground">
+            <color red="0.30196079609999998" green="0.30199999999999999" blue="0.30196079609999998" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="notSelectedBackground">
+            <color red="0.94900000095367432" green="0.94900000095367432" blue="0.94900000095367432" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="notSelectedText">
+            <color red="0.45500001311302185" green="0.45500001311302185" blue="0.46299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

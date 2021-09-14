@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Okv-zw-N96">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--List View-->
+        <scene sceneID="qje-JM-cx8">
+            <objects>
+                <viewController storyboardIdentifier="ListView" id="Okv-zw-N96" customClass="ListView" customModule="Pokedex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gzj-gd-XcP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="What Pokémon are you looking for?" translatesAutoresizingMaskIntoConstraints="NO" id="B3b-bc-KLo">
+                                <rect key="frame" x="20" y="222" width="374" height="57"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="57" id="bC4-ko-q6j"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZoD-tH-IE9">
+                                <rect key="frame" x="0.0" y="49" width="414" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Thw-io-dfW">
+                                        <rect key="frame" x="267" y="10" width="21" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" image="generationsButton"/>
+                                        <connections>
+                                            <action selector="onGenerationsButtonTapped:" destination="Okv-zw-N96" eventType="touchUpInside" id="4eW-0W-X8e"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tBK-tS-os0">
+                                        <rect key="frame" x="317" y="11" width="21" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" image="orderButton"/>
+                                        <connections>
+                                            <action selector="sortMenu:" destination="Okv-zw-N96" eventType="touchUpInside" id="kPX-dH-hAi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6B-Qu-ljd">
+                                        <rect key="frame" x="368" y="11" width="21" height="20"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" image="FiltersButton"/>
+                                        <connections>
+                                            <action selector="onFilterButtonTapped:" destination="Okv-zw-N96" eventType="touchUpInside" id="2id-iL-rux"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="eKs-gK-ahF"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6dV-TR-TEi">
+                                <rect key="frame" x="0.0" y="294" width="414" height="568"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="veN-vb-oVf">
+                                        <rect key="frame" x="0.0" y="24.333333969116211" width="414" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="veN-vb-oVf" id="Jp1-cb-j6B">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <connections>
+                                            <segue destination="fsr-zM-WDF" kind="presentation" identifier="showDetail" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="4Sg-Bg-u00"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Title" translatesAutoresizingMaskIntoConstraints="NO" id="zSX-cS-P1K">
+                                <rect key="frame" x="37" y="113" width="124" height="25"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search for Pokémon by name or using the National Pokédex number." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lol-Vc-IBS">
+                                <rect key="frame" x="37" y="146" width="281" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="o69-Nx-ex2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XxP-8w-EFR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B3b-bc-KLo" firstAttribute="leading" secondItem="gzj-gd-XcP" secondAttribute="leadingMargin" id="6yp-2C-tnF"/>
+                            <constraint firstItem="lol-Vc-IBS" firstAttribute="leading" secondItem="zSX-cS-P1K" secondAttribute="leading" id="8BA-0A-lOH"/>
+                            <constraint firstItem="B3b-bc-KLo" firstAttribute="centerX" secondItem="6dV-TR-TEi" secondAttribute="centerX" id="ALc-R6-d94"/>
+                            <constraint firstItem="6dV-TR-TEi" firstAttribute="top" secondItem="B3b-bc-KLo" secondAttribute="bottom" constant="15" id="DhD-Bv-KMK"/>
+                            <constraint firstItem="lol-Vc-IBS" firstAttribute="top" secondItem="zSX-cS-P1K" secondAttribute="bottom" constant="8" id="Jct-cK-NPg"/>
+                            <constraint firstItem="XxP-8w-EFR" firstAttribute="trailing" secondItem="lol-Vc-IBS" secondAttribute="trailing" constant="96" id="JfS-8N-3jL"/>
+                            <constraint firstItem="6dV-TR-TEi" firstAttribute="trailing" secondItem="XxP-8w-EFR" secondAttribute="trailing" id="KUa-Kc-D5Z"/>
+                            <constraint firstItem="6dV-TR-TEi" firstAttribute="leading" secondItem="XxP-8w-EFR" secondAttribute="leading" id="PLa-le-6vM"/>
+                            <constraint firstItem="B3b-bc-KLo" firstAttribute="top" secondItem="lol-Vc-IBS" secondAttribute="bottom" constant="11" id="Q49-iE-i3L"/>
+                            <constraint firstItem="B3b-bc-KLo" firstAttribute="top" secondItem="gzj-gd-XcP" secondAttribute="top" constant="222" id="hQG-AD-yVr"/>
+                            <constraint firstItem="ZoD-tH-IE9" firstAttribute="trailing" secondItem="XxP-8w-EFR" secondAttribute="trailing" id="hZZ-kz-zHr"/>
+                            <constraint firstItem="ZoD-tH-IE9" firstAttribute="leading" secondItem="XxP-8w-EFR" secondAttribute="leading" id="lZc-2t-Wae"/>
+                            <constraint firstItem="ZoD-tH-IE9" firstAttribute="top" secondItem="XxP-8w-EFR" secondAttribute="top" constant="5" id="sCc-4C-uIW"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="6dV-TR-TEi" secondAttribute="bottom" id="skH-aY-se8"/>
+                            <constraint firstItem="lol-Vc-IBS" firstAttribute="leading" secondItem="XxP-8w-EFR" secondAttribute="leading" constant="37" id="zNC-0J-RTl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="nUB-UR-rTJ"/>
+                    <connections>
+                        <outlet property="searchBar" destination="B3b-bc-KLo" id="00a-em-3PH"/>
+                        <outlet property="tableView" destination="6dV-TR-TEi" id="iFJ-Im-D6Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="66Q-7q-MK7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="813.04347826086962" y="75"/>
+        </scene>
+        <!--DetailView-->
+        <scene sceneID="A6h-Uo-WHI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="DetailView" referencedIdentifier="DetailView" id="fsr-zM-WDF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="i6M-Qo-BjQ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A6p-u9-MgS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1627" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="FiltersButton" width="21" height="19"/>
+        <image name="Title" width="124" height="25"/>
+        <image name="generationsButton" width="21" height="21"/>
+        <image name="orderButton" width="21" height="19"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,91 @@
+query getPokemonDetail($_eq: Int = 1) {
+    pokemon_v2_pokemonspecies(where: { id: { _eq: $_eq } }) {
+        base_happiness
+        capture_rate
+        hatch_counter
+        name
+        gender_rate
+        pokemon_v2_pokemons {
+            base_experience
+            height
+            id
+            is_default
+            name
+            pokemon_species_id
+            weight
+            pokemon_v2_pokemonstats(order_by: { stat_id: asc }) {
+                __typename
+                base_stat
+                stat_id
+                effort
+                pokemon_v2_stat {
+                    name
+                }
+            }
+            pokemon_v2_pokemonabilities(where: {}) {
+                pokemon_v2_ability {
+                    name
+                }
+                is_hidden
+            }
+            pokemon_v2_pokemontypes {
+                type_id
+            }
+        }
+        pokemon_v2_pokemonspeciesnames(where: { language_id: { _eq: 9 } }) {
+            genus
+            language_id
+        }
+        pokemon_v2_growthrate {
+            name
+            id
+        }
+        pokemon_v2_pokemonegggroups {
+            pokemon_v2_egggroup {
+                name
+                id
+            }
+        }
+        pokemon_v2_pokemondexnumbers {
+            pokemon_v2_pokedex {
+                pokemon_v2_pokedexdescriptions(where: { language_id: { _eq: 9 } }) {
+                    description
+                }
+                pokemon_v2_pokedexnames(where: { language_id: { _eq: 9 } }) {
+                    name
+                }
+            }
+            pokedex_number
+        }
+        pokemon_v2_evolutionchain {
+            id
+            pokemon_v2_pokemonspecies(order_by: { order: asc }) {
+                id
+                name
+                pokemon_v2_pokemonevolutions {
+                    min_level
+                    pokemon_v2_evolutiontrigger {
+                        id
+                        name
+                    }
+                    pokemon_v2_item {
+                        id
+                        name
+                    }
+                    min_affection
+                    min_beauty
+                    min_happiness
+                    time_of_day
+                }
+                order
+                pokemon_v2_pokemonspeciesflavortexts(
+                    where: { language_id: { _eq: 9 } }
+                    order_by: { id: desc }
+                ) {
+                    flavor_text
+                    version_id
+                }
+            }
+        }
+    }
+}
